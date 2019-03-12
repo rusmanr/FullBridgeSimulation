@@ -98,7 +98,7 @@ Matrix Matrix::inverse() const
     {
         Matrix B(rows,cols);
         B.setValue(0,0, getValue(1,1) / det());
-        B.setValue(0,1, -getValue(1,0) / det());
+        B.setValue(0,1, -getValue(0,1) / det());
         B.setValue(1,0, -getValue(1,0) / det());
         B.setValue(1,1, getValue(0,0) / det());
         return B;
